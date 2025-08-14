@@ -1,0 +1,14 @@
+{
+  "name": "epherome-docs",
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "vitepress": "^1.6.4",
+    "vue": "^3.5.18"
+  },
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "lint": "biome check --write"
+  }
+}
