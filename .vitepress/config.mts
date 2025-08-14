@@ -20,7 +20,7 @@ export default defineConfig({
         { text: "快速开始", link: "/usr/quickstart" },
       ],
       "/dev/": [{ text: "欢迎", link: "/dev/" }],
-      "/mc/": [{ text: "欢迎", link: "/mc/" }],
+      "/mc/": [{ text: "欢迎", link: "/mc/" }, { text: "坐标系", link: "/mc/coordinate" }],
     },
     socialLinks: [
       { icon: "github", link: "https://github.com/ResetPower/Epherome" },
