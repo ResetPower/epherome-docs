@@ -1,10 +1,11 @@
 import { defineConfig } from "vitepress";
+import { withSidebar } from "vitepress-sidebar";
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+const vitepressConfig = defineConfig({
   title: "Epherome",
   lastUpdated: true,
   srcDir: "./src",
+  lang: "zh-CN",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -13,15 +14,6 @@ export default defineConfig({
       { text: "开发文档", link: "/dev/" },
       { text: "创世指南", link: "/mc/" },
     ],
-    sidebar: {
-      "/usr/": [
-        { text: "欢迎", link: "/usr/" },
-        { text: "简介", link: "/usr/intro" },
-        { text: "快速开始", link: "/usr/quickstart" },
-      ],
-      "/dev/": [{ text: "欢迎", link: "/dev/" }],
-      "/mc/": [{ text: "欢迎", link: "/mc/" }, { text: "坐标系", link: "/mc/coordinate" }],
-    },
     socialLinks: [
       { icon: "github", link: "https://github.com/ResetPower/Epherome" },
     ],
@@ -30,5 +22,44 @@ export default defineConfig({
         "https://github.com/ResetPower/epherome-docs/edit/main/src/:path",
       text: "在 GitHub 上编辑此页面",
     },
+    lastUpdated: {
+      text: "最近更新于",
+    },
+    docFooter: {
+      prev: "上一页",
+      next: "下一页",
+    },
+    darkModeSwitchLabel: "主题",
+    lightModeSwitchTitle: "切换到浅色模式",
+    darkModeSwitchTitle: "切换到深色模式",
+    sidebarMenuLabel: "菜单",
+    returnToTopLabel: "回到顶部",
   },
 });
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig(
+  withSidebar(vitepressConfig, [
+    {
+      scanStartPath: "src/usr",
+      resolvePath: "/usr/",
+      useTitleFromFrontmatter: true,
+      useFolderTitleFromIndexFile: true,
+      collapsed: false,
+    },
+    {
+      scanStartPath: "src/dev",
+      resolvePath: "/dev/",
+      useTitleFromFrontmatter: true,
+      useFolderTitleFromIndexFile: true,
+      collapsed: false,
+    },
+    {
+      scanStartPath: "src/mc",
+      resolvePath: "/mc/",
+      useTitleFromFrontmatter: true,
+      useFolderTitleFromIndexFile: true,
+      collapsed: false,
+    },
+  ]),
+);
