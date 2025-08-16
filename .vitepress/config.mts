@@ -22,6 +22,9 @@ const vitepressConfig = defineConfig({
         "https://github.com/ResetPower/epherome-docs/edit/main/src/:path",
       text: "在 GitHub 上编辑此页面",
     },
+	outline: {
+	  label: "页面导航",
+	},
     lastUpdated: {
       text: "最近更新于",
     },
