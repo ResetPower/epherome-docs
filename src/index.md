@@ -5,7 +5,7 @@ layout: home
 hero:
   name: Epherome
   text: 也许不只是第三方 Minecraft 启动器。
-  tagline: 此项目正建设中，欢迎期待或加入我们。点击「了解更多」可获取与我们取得联系的方式。
+  tagline: 此项目正建设中，欢迎期待或加入我们。
   actions:
     - theme: brand
       text: 快速开始

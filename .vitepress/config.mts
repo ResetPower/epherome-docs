@@ -12,7 +12,7 @@ const vitepressConfig = defineConfig({
       { text: "首页", link: "/" },
       { text: "用户手册", link: "/usr/" },
       { text: "开发文档", link: "/dev/" },
-      { text: "创世指南", link: "/mc/" },
+      { text: "创世记", link: "/mc/" },
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/ResetPower/Epherome" },
